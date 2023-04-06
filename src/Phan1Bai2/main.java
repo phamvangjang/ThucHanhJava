@@ -1,6 +1,8 @@
 package Phan1Bai2;
 
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 //Cho mảng 1 chiều các số nguyên (int) hiện thực các phương thức sau:
 public class main {
@@ -26,7 +28,7 @@ public class main {
 	}
 
 //	3) Lấy ra các phần tử nhỏ hơn 1 số cho trước (kiểu trả về là mảng)
-	public static int[] smallerThan(int[] arr, int num) {
+	public static String smallerThan(int[] arr, int num) {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		for (int i = 0; i <= arr.length; i++) {
 			if (arr[i] < num) {
@@ -37,7 +39,7 @@ public class main {
 		for (int i = 0; i < result.size(); i++) {
 			arrResult[i] = result.get(i);
 		}
-		return arrResult;
+		return Arrays.toString(arrResult);
 	}
 
 	public static void main(String[] args) {
@@ -46,7 +48,7 @@ public class main {
 		System.out.println("so phan tu boi cua 2 la: " + countMultiplesOfTwo(arr));
 //		System.out.println("vi tri xuat hien cuoi cung cua "+8+ "trong mang cho truoc la: "+lastIndexOf(arr, 8)); 
 //		bug fixing 
-//		System.out.println(" mang cac phan tu nho hon"+10+"la: "+smallerThan(arr, 10));
+//		System.out.println("Mang cac phan tu nho hon"+10+"la: "+smallerThan(arr, 4));
 //		bug fixing 
 	}
 
