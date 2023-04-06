@@ -44,7 +44,10 @@ public class main {
 		// TODO Auto-generated method stub
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 		System.out.println("so phan tu boi cua 2 la: " + countMultiplesOfTwo(arr));
-
+//		System.out.println("vi tri xuat hien cuoi cung cua "+8+ "trong mang cho truoc la: "+lastIndexOf(arr, 8)); 
+//		bug fixing 
+//		System.out.println(" mang cac phan tu nho hon"+10+"la: "+smallerThan(arr, 10));
+//		bug fixing 
 	}
 
 }
