@@ -1,4 +1,4 @@
-"# ThucHanhJava" 
+Đề bài:
 Phần 1. Mảng 1 chiều
 Bài 1.1. Cho mảng 1 chiều các số nguyên (int) hiện thực các phương thức sau:
 1) Đếm số phần tử chẵn trong mảng
