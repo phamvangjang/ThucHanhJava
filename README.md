@@ -6,4 +6,4 @@ Content: Exercises from basic to advanced
 
 The language used : Java
 
-[Exercises Link](github.com/phamvangjang/ThucHanhJava/blob/main/src/DeBai/BaiTapThamKhaoJava.pdf)
+[Exercises Link](src/DeBai/BaiTapThamKhaoJava.pdf)
