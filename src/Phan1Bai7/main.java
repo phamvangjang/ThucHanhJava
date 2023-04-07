@@ -4,7 +4,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//1) Đếm số chuỗi có ký tự đầu tiên được viết hoa trong mảng
 public class main {
 	public static int countUpperCaseStrings(String[] arrStr) {
 		int count =0;
@@ -15,7 +15,7 @@ public class main {
 		}
 		return count;
 	}
-	
+//	2) Xác định vị trí xuất hiện thứ 2 của một chuỗi cho trước trong mảng
 	public static int findSecondIndex(String[] arrStr, String target) {		
 		int count=0;
 		for(int i=0;i<arrStr.length;i++) {
@@ -28,7 +28,7 @@ public class main {
 		}
 		return -1; 
 	}
-	
+//	3) Lấy ra tất cả các chuỗi có chứa 1 chuỗi cho trước (kiểu trả về là mảng)
 	public static String[] findAllContainingStrings(String[] arrStr, String target) {
 		List<String> result = new ArrayList<String>();
 		for(String str : arrStr) {
