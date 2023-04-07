@@ -5,3 +5,5 @@ Programming support tools: Eclipse IDE
 Content: Exercises from basic to advanced
 
 The language used : Java
+
+[Exercises Link](github.com/phamvangjang/ThucHanhJava/blob/main/src/DeBai/BaiTapThamKhaoJava.pdf)
