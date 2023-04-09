@@ -74,14 +74,12 @@ public class main {
 					}
 				}
 			}
-		}	
+		}
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][] arr = { { 5, 6, 7, -1 }, 
-					   { 15, 19, 3, 8 }, 
-					   { 3, 4, -1, 2 } };
+		int[][] arr = { { 5, 6, 7, -1 }, { 15, 19, 3, 8 }, { 3, 4, -1, 2 } };
 		int row = 1;
 
 		int secondLargestPrime = findSecondLargestPrime(arr);
@@ -92,16 +90,15 @@ public class main {
 		}
 
 		System.out.println("Tong cac phan tu tren hang " + row + " la: " + sumRow(arr, row));
-		
-		
+
 		replaceMissingBorder(arr);
-	    System.out.println("Mảng sau khi thay thế phần tử biên bị thiếu:");
-	    for (int i = 0; i < arr.length; i++) {
-	        for (int j = 0; j < arr[0].length; j++) {
-	            System.out.print(arr[i][j] + " ");
-	        }
-	        System.out.println();
-	    }
+		System.out.println("Mảng sau khi thay thế phần tử biên bị thiếu:");
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[0].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 
 }

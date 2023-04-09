@@ -38,19 +38,19 @@ public class main {
 		}
 		return sum;
 	}
-	
+
 //	3) Thay thế các phần tử bị thiếu (phần tử có giá trị = -1) trên 1 hàng bằng phần tử nhỏ nhất ở hàng đó
 	public static String replaceMissingWithMin(int[][] arr, int rowIndex) {
 //		Tìm phần tử nhỏ nhất trên hàng đó
 		int minNum = Integer.MAX_VALUE;
-		for(int num : arr[rowIndex]) {
-			if(num<minNum) {
-				minNum=num;
+		for (int num : arr[rowIndex]) {
+			if (num < minNum) {
+				minNum = num;
 			}
 		}
 //		Thay thế các phần tử bị thiếu bằng phần tử nhỏ nhất đó
-		for(int j=0; j<arr[rowIndex].length;j++) {
-			if(arr[rowIndex][j]==-1) {
+		for (int j = 0; j < arr[rowIndex].length; j++) {
+			if (arr[rowIndex][j] == -1) {
 				arr[rowIndex][j] = minNum;
 			}
 		}
@@ -58,20 +58,18 @@ public class main {
 	}
 
 	public static void main(String[] args) {
-		
+
 		// TODO Auto-generated method stub
-		int[][] arr = { { 5, 6, 7, -1 }, 
-				       { -1, 19, 3, 8 }, 
-				       { 3, 4, -1, 2 } };
-		int colums =2;
+		int[][] arr = { { 5, 6, 7, -1 }, { -1, 19, 3, 8 }, { 3, 4, -1, 2 } };
+		int colums = 2;
 		int rowIndex = 1;
-		System.out.println("Số chẵn lớn thứ 2 trong mảng là: "+findSecondLargestEven(arr));
-		
-		System.out.println("Tổng các phần tử trên cột "+colums+" là: "+sumColums(arr, colums));
-		
+		System.out.println("Số chẵn lớn thứ 2 trong mảng là: " + findSecondLargestEven(arr));
+
+		System.out.println("Tổng các phần tử trên cột " + colums + " là: " + sumColums(arr, colums));
+
 //		bug fixing
 		replaceMissingWithMin(arr, rowIndex);
-		for(int[] arrResult : arr) {
+		for (int[] arrResult : arr) {
 			System.out.println(Arrays.toString(arrResult));
 		}
 	}
