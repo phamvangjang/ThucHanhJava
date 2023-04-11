@@ -60,7 +60,6 @@ public class main {
 		// TODO Auto-generated method stub
 		char[][] arr = { { 'p', 'h', 'a', 'm', 'v' }, { 'a', 'n', 'g', 'i', 'g' }, { 'i', 'a', 'n', 'g', 'C' },
 				{ 'N', 'T', 'T', 'K', '6' }, { '2', 'H', 'c', 'M', 'c' }, };
-		int cols = 2;
 		System.out.println("so ký tự số trong mảng: " + countDigits(arr));
 
 		char[][] str = new char[arr.length][];
