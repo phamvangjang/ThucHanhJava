@@ -2,8 +2,6 @@ package Phan2Bai5;
 
 import java.util.Arrays;
 
-import Phan2Bai4.main;
-
 public class main {
 //	1) Tìm phần tử lớn thứ 2 trên 2 đường chéo
 	public static int findSecondMaxOnDiagonals(int[][] arr) {
