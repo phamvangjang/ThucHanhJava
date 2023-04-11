@@ -12,27 +12,28 @@ public class main {
 		for (int i = 0; i < numRows; i++) {
 			if (i < numCols && arr[i][i] > maxOnDiagonals) {
 				maxOnDiagonals = arr[i][i];
-				secondMaxOnDiagonals=maxOnDiagonals;
+				secondMaxOnDiagonals = maxOnDiagonals;
 			}
 			if (i < numCols && arr[i][numCols - i - 1] > maxOnDiagonals) {
 				maxOnDiagonals = arr[i][numCols - i - 1];
-				secondMaxOnDiagonals=maxOnDiagonals;
+				secondMaxOnDiagonals = maxOnDiagonals;
 			}
 		}
 		return secondMaxOnDiagonals;
 	}
+
 //	2) Tính tổng các phần tử trên 2 đường chéo
 	public static int sumDiagonal(int[][] arr) {
-		int sum=0;
-		for(int i=0;i<arr.length;i++) {
-			sum+=arr[i][i];
-			sum+=arr[i][arr.length-1-i];
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i][i];
+			sum += arr[i][arr.length - 1 - i];
 		}
 		return sum;
 	}
-	
+
 //	3) Thay thế phần tử biên bị thiếu (phần tử có giá trị = -1) bằng giá trị biên lớn nhất
-	
+
 	public static void replaceMissingElements(int[][] arr) {
 		int max = Integer.MIN_VALUE;
 		// Tìm phần tử lớn nhất và lớn thứ 2 ở hàng đầu tiên
@@ -57,7 +58,7 @@ public class main {
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i][arr[0].length - 1] > max) {
 				max = arr[i][arr[0].length - 1];
-			} 
+			}
 		}
 		for (int i = 0; i < arr[0].length; i++) {
 			for (int j = 0; j < arr.length; j++) {
@@ -67,15 +68,13 @@ public class main {
 			}
 		}
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][] arr = { { 1, 17, 3, -1 }, 
-				        { 4, -1, 6, 7 }, 
-				        { 8, 3, 10, 7 }, 
-				        { 2, 13, -1, 15 } };
-		System.out.println("Phần tử lớn thứ 2 trên 2 đường chéo: "+findSecondMaxOnDiagonals(arr));
-		System.out.println("Tổng các phần tử trên 2 đường chéo: "+sumDiagonal(arr));
-		
+		int[][] arr = { { 1, 17, 3, -1 }, { 4, -1, 6, 7 }, { 8, 3, 10, 7 }, { 2, 13, -1, 15 } };
+		System.out.println("Phần tử lớn thứ 2 trên 2 đường chéo: " + findSecondMaxOnDiagonals(arr));
+		System.out.println("Tổng các phần tử trên 2 đường chéo: " + sumDiagonal(arr));
+
 //		copy array 2D
 		int[][] str = new int[arr.length][];
 		for (int i = 0; i < arr.length; i++) {

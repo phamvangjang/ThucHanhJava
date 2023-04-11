@@ -106,8 +106,8 @@ public class main {
 		int[][] arr = { { 1, 17, 3, -1 }, { 4, -1, 6, 7 }, { 8, 3, 10, 7 }, { 2, 13, -1, 15 } };
 
 		System.out.println("Phần tử biên lớn thứ 2 là: " + findSecondLargest(arr));
-		System.out.println("Phần tử biên nhỏ nhất là: "+ findMinBoundary(arr));
-		
+		System.out.println("Phần tử biên nhỏ nhất là: " + findMinBoundary(arr));
+
 //		copy array 2D
 		int[][] str = new int[arr.length][];
 		for (int i = 0; i < arr.length; i++) {
