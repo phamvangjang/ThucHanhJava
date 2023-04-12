@@ -1,5 +1,7 @@
 package Phan2Bai3;
 
+import java.util.Arrays;
+
 public class main {
 //	1) Tìm số lẻ lớn thứ 2 trong mảng
 	public static int findSecondLargestOdd(int[][] arr) {
@@ -56,14 +58,19 @@ public class main {
 
 		System.out.println("Số lẻ lớn thứ 2 trong mảng là: " + findSecondLargestOdd(arr));
 		System.out.println("phần tử lớn nhất trên 2 đường chéo: " + findMaxOnDiagonals(arr));
-
-		main.replaceMissingElements(arr, 1);
-		System.out.println("Mang sau khi duoc thay the la: ");
-		for (int row[] : arr) {
-			for (int num : row) {
-				System.out.print(num + "   ");
+		
+//		copy array 2D
+		int[][] str = new int[arr.length][];
+		for (int i = 0; i < arr.length; i++) {
+			str[i] = new int[arr[i].length];
+			for (int j = 0; j < arr[i].length; j++) {
+				str[i][j] = arr[i][j];
 			}
-			System.out.println();
+		}
+		main.replaceMissingElements(str, 1);
+		System.out.println("Mang sau khi duoc thay the la: ");
+		for(int[] row : str) {
+			System.out.println(Arrays.toString(row));
 		}
 	}
 

@@ -117,10 +117,10 @@ public class main {
 			}
 		}
 		main.replaceMissingElements(str);
-		System.out.println("Mảng trước khi thay thế là:");
-		System.out.println(Arrays.deepToString(arr));
 		System.out.println("Mảng sau khi thay thế là:");
-		System.out.println(Arrays.deepToString(str));
+		for(int[] row : str) {
+			System.out.println(Arrays.toString(row));
+		}
 
 	}
 

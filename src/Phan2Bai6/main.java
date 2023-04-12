@@ -70,10 +70,10 @@ public class main {
 			}
 		}
 		main.uppercaseForCols(str);
-		System.out.println("Mảng trước khi thay thế là:");
-		System.out.println(Arrays.deepToString(arr));
 		System.out.println("Mảng sau khi thay thế là:");
-		System.out.println(Arrays.deepToString(str));
+		for(char[] row : str) {
+			System.out.println(Arrays.toString(row));
+		}
 
 		System.out.println("ký tự xuất hiện nhiều nhất trên 2 đường chéo: " + findMostFrequentCharacter(arr));
 	}
