@@ -62,17 +62,30 @@ public class main {
 		}
 	}
 //	3) Tìm ký tự số xuất hiện nhiều nhất trong mảng
-//	public static int findMostFrequentChar(char[][] arr) {
-//		// Tạo một HashMap để đếm số lần xuất hiện của các ký tự
-//		Map<Character, Integer> charCounts = new HashMap<Character, Integer>();
-//		// Duyệt các phần tử của mang
-//		for (int i = 0; i < arr.length; i++) {
-//			for(int j=0;j<arr[0].length;j++) {
-//				charCounts.put(arr[i][j], charCounts.getOrDefault(arr[i][j], 0) + 1);
-//			}
-//		}
-//		return charCounts
-//	}
+	public static char findMostFrequentChar(char[][] arr) {
+        // Khởi tạo mảng tần suất
+        int[] freq = new int[256]; // Mảng tần suất các ký tự ASCII
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+            	if(Character.isDigit(arr[i][j])) {
+            		char c = arr[i][j];
+            		freq[c]++;
+            	}
+            }
+        }
+
+        // Tìm ký tự có tần suất cao nhất trong mảng tần suất
+        char mostFreqChar = 0;
+        int maxFreq = 0;
+        for (int i = 0; i < freq.length; i++) {
+            if (freq[i] > maxFreq) {
+                mostFreqChar = (char) i;
+                maxFreq = freq[i];
+            }
+        }
+
+        return mostFreqChar;
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		char[][] arr = { { 'p', 'h', 'a', 'm', 'v' }, 
@@ -81,24 +94,22 @@ public class main {
 						 { 'N', 'T', 'T', 'K', '6' }, 
 						 { '2', 'H', '6', 'M', 'c' } };
 //		bug fixing
-//		System.out.println("Số phần tử biên có kí tự là số là: " + countIsDigitBoundary(arr));
-//		
-//		char[][] str = new char[arr.length][];
-//		for (int i = 0; i < arr.length; i++) {
-//			str[i] = new char[arr[i].length];
-//			for (int j = 0; j < arr[i].length; j++) {
-//				str[i][j] = arr[i][j];
-//			}
-//		}
-//		main.convertToUppercaseBoundary(str);
-//		System.out.println("Mảng trước khi thay thế là:");
-//		System.out.println(Arrays.deepToString(arr));
-//		System.out.println("Mảng sau khi thay thế là:");
-//		System.out.println(Arrays.deepToString(str));
+		System.out.println("Số phần tử biên có kí tự là số là: " + countIsDigitBoundary(arr));
 		
-		String a="giang";
-		String b="Giang";
-		System.out.println("result: "+a.equals(b));
+		char[][] str = new char[arr.length][];
+		for (int i = 0; i < arr.length; i++) {
+			str[i] = new char[arr[i].length];
+			for (int j = 0; j < arr[i].length; j++) {
+				str[i][j] = arr[i][j];
+			}
+		}
+		main.convertToUppercaseBoundary(str);
+		System.out.println("Mảng trước khi thay thế là:");
+		System.out.println(Arrays.deepToString(arr));
+		System.out.println("Mảng sau khi thay thế là:");
+		System.out.println(Arrays.deepToString(str));
+		
+		System.out.println("ký tự số xuất hiện nhiều nhất trong mảng: "+findMostFrequentChar(arr));
 	}
 
 }
