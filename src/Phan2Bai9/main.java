@@ -52,6 +52,7 @@ public class main {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		char[][] arr = { { 'p', 'h', 'a', 'm', 'v', 'T'}, 
 				 		 { 'a', 'n', 'g', 'i', 'g', 'r' }, 
 				 		 { 'i', 'a', 'n', 'g', 'C', 'a' },
@@ -76,6 +77,9 @@ public class main {
 		
 //		bug fixing: case 2 ki tu co so lan xuat hien bang nhau =))
 		System.out.println("ký tự chữ viết hoa xuất hiện nhiều nhất trong mảng: "+findMostFrequentUpperCaseChar(arr));
+		
+		
+//		System.out.println(args[0]);
 	}
 	
 }
